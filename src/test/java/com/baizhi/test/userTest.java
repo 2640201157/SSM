@@ -13,7 +13,9 @@ import java.util.List;
 public class userTest {
     @Test
     public void test1(){
-
+/**
+ * 这是我第一次修改
+ */
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         //UserService userService1 =(UserService) ac.getBean("userService");
         //userService1.modifyregister(new User(null,"徐震","18","10000","hahah","男","112233"));
