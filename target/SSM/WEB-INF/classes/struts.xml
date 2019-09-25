@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+    <package name="user" extends="struts-default" namespace="/user">
+        <!--  登录的action-->
+        <action name="login" class="userAction" method="login">
+            <result name="success" type="redirectAction">showAll</result>
+        </action>
+        <!--展示所有的action-->
+        <action name="showAll" class="userAction" method="showAll">
+            <result name="success">/jsp/emplist.jsp</result><!-- 用你妈的的重定向啊  -->
+        </action>
+        <!-- 添加联系人  -->
+        <action name="addUser" class="userAction" method="addUser">
+            <result name="success" type="redirectAction">showAll</result><!-- 用你妈的的重定向啊  -->
+        </action>
+        <!-- 注册联系人  -->
+        <action name="register" class="userAction" method="register">
+            <result name="success">/jsp/login.jsp</result><!-- 用你妈的的重定向啊  -->
+        </action>
+        <!-- 注册联系人  -->
+        <action name="deleteById" class="userAction" method="deleteById">
+            <result name="success" type="redirectAction">showAll</result><!-- 用你妈的的重定向啊  -->
+        </action>
+        <!-- 注册联系人  -->
+        <action name="toUpdate" class="userAction" method="toUpdate">
+            <result name="success">/jsp/updateEmp.jsp</result><!-- 用你妈的的重定向啊  -->
+        </action>
+        <action name="updateUser" class="userAction" method="updateUser">
+            <result name="success"  type="redirectAction">showAll</result><!-- 用你妈的的重定向啊  -->
+        </action>
+    </package>
+</struts>
